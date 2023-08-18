@@ -216,7 +216,7 @@ System.out.println("Insira seu nome");
       System.out.println("Insira seu estado civil");
       String a = s.nextLine();
       String sol= "solteiro";
-      String casado = "casado";
+      String casado7 = "casado";
       if (a.equals(sol) ) {
         System.out.println("Você é solteiro(a)");
         

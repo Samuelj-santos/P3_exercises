@@ -5,30 +5,30 @@ import java.util.Scanner;
 public class Exercise_five {
   static Scanner s = new Scanner(System.in);
     public static void main(String[] args) {
-       //Question01();
-   //Question02();
-   //Question03();
-   //Question04();
-   //Question05();
-   //Question06();
-   //Question07();
-   //Question08();
-   //Question09();
-   //Question10();
-   //Question11();
-   //Question12();
-  //Question13();
-   //Question14();
-   //Question15();
-   //Question16();
-   //Question17();
-   //Question18();
-   //Question19();
-   //Question20();
-   //Question21();
-    //Question22();
-     //Question23();
-      //Question24();
+  //  Question01();
+  //  Question02();
+  //  Question03();
+  //  Question04();
+  //  Question05();
+  //  Question06();
+  //  Question07();
+  //  Question08();
+  //  Question09();
+  //  Question10();
+  //  Question11();
+  //  Question12();
+   // Question13();
+   // Question14();
+   // Question15();
+   // Question16();
+   // Question17();
+   // Question18();
+   // Question19();
+  //  Question20();
+   // Question21();
+   // Question22();
+  //  Question23();
+   // Question24();
 
    // utilize  cada questoes individualmente para evitar problemas no scanner  
     }
@@ -192,6 +192,9 @@ public class Exercise_five {
     int result =0;
     while (s.hasNext()) {
       int a = s.nextInt();
+      if (a == -1) {
+        break;
+      }
       contador ++;
       soma = soma+a;
     }
@@ -230,42 +233,167 @@ public class Exercise_five {
      }
     }
     public static  void Question16(){
+      System.out.println("inisra 5 notas");
       int i =0;
     while (i<5) {
       int a = s.nextInt();
       if (a>=7) {
-        System.out.println("O aluno " + i + " foi aprovado");
+        System.out.println("O aluno " + (i+1) + " foi aprovado");
       }
       else{
-        System.out.println("o aluno " + i + " foi reprovado");
+        System.out.println("o aluno " + (i+1) + " foi reprovado");
       }
       i++;
     }
     }
     public static  void Question17(){
-     
+      System.out.println("Insira numeros e vai receber a  quantidade de numeros pares antes de um numero impar , se for zero o programa acaba , se for impar tambem o programa caba");
+      int contador = 0;
+      while (s.hasNext()) {
+      
+      int a = s.nextInt();
+      if (a == 0) {
+        break;
+      }
+      if ((a%2) == 0) {
+        contador ++;
+      }else{
+        break;
+      }
+
+     }
+     System.out.println("Seu resultado foi " + contador);
     }
     public static  void Question18(){
+     System.out.println("digite numeros , se digitar zero o programa acaba ");
+     int contadorpar = 0;
+     int contadorimpar = 0;
+     while (s.hasNext()) {
+      int a = s.nextInt();
+      if (a ==0 ) {
+        break;
+      }
 
+      if ((a%2) == 0) {
+        contadorpar++;
+      }else{
+        contadorimpar++;
+      }
+     }
+     System.out.println("O numero de numero pares foi "  + contadorpar + " e impares " + contadorimpar);
     }
     public static  void Question19(){
+    System.out.println("insira numeros e vai receber qual sao divisiveis por 2 , por 3 e por 5");
+    int contadordois = 0;
+    int contadortres = 0;
+    int contadorcinco = 0;
+    while (s.hasNext()) {
+      int a = s.nextInt();
+      if (a == 0) {
+        break;
+      }
+      if ((a%2) ==  0) {
+        contadordois++;
+      }else if ((a%3) == 0) {
+        contadortres++;
 
+      }else{
+        contadorcinco++;
+      }
+     }
+     System.out.println(" os numeros divisiveis  por 2 sao " + contadordois );
+      System.out.println(" os numeros divisiveis por 3 sao "  + contadortres );
+       System.out.println(" os numeros divisiveis por 5 sao " + contadorcinco );
     }
 
     public static  void Question20(){
-
+    System.out.println("exibir o numero  de numeros diviseis por 3  se digitar 0 o programa para");
+     int soma = 0;
+     int contador =0 ;
+    while (s.hasNext()) {
+      int a = s.nextInt();
+      if (a ==0 ) {
+        break;
+      }
+      if ( (a%3) == 0) {
+        soma = soma+a;
+        contador++;
+      }
+     
+    }
+    System.out.println("a media dos numeros divididos por 3  é " + (soma/contador));
     }
     public static  void Question21(){
+     System.out.println("Insira numeros e vai receber quais tem mais de 3 digitos");
+     int contador = 0; 
+     while (s.hasNext()) {
+      int a  = s.nextInt();  
+     String number = String.valueOf(a);
+     String[] digits = number.split("(?<=.)");
+     if (a ==0 ) {
+      break;
+     }
+
+     if (digits.length == 3) {
+      contador ++;
+     }
+    }
+    System.out.println("a quantidade de numeros que tem mais de 3 digitos são " +  contador);
 
     }
     public static  void Question22(){
-
+    System.out.println(" vc vai receber a media  dos numeros que estão entre 50 e 100 se digitar 0 o programa acaba");
+    int soma =0 ;
+    int contador = 0;
+    while (s.hasNext()) {
+      int a = s.nextInt();  
+      if (a ==0 ) {
+        break;
+        
+      }
+      if ((a>=50)   && (a<=100)) {
+        soma = soma+a;
+        contador++;
+      }
+    }
+    System.out.println("o resultado é " + (soma/contador));
     }
     public static  void Question23(){
+    System.out.println("insira numeros e vai receber o menor positivo e impar , se digitar 0 o programa para ");
+    int menor = 0;
+    int menorpassado =10000000;
+    while (s.hasNext()) {
+      int a = s.nextInt();
+      if (a == 0) {
+        break;
+      }
+      if ((a>0) && (a%2 != 0)) {
+        menor = a;
+        if (menor<menorpassado) {
+          menorpassado = menor;
+        }
+      }
+    
+    }
+    System.out.println("seu resultado é " + menorpassado);
 
     }
      public static   void Question24(){
-
+      System.out.println(" inisra numeros e o programa vai dizer qunatos sao pares  e quantos sao impares");
+      int contadorpar = 0;
+      int contadorimpar = 0;
+      while (s.hasNext()) {
+        int a  =s.nextInt();
+        if (a == 0) {
+          break;
+        }
+        if ((a%2) == 0) {
+          contadorpar++;
+        }else{
+          contadorimpar++;
+        }
+      }
+     System.out.println(" a quantidades de numeros pares sao " + contadorpar + " e impares " + contadorimpar);
     }
 
 }

@@ -3,11 +3,11 @@ package Exercise_Seven.Question_01;
 public class Paciente {
 
    private String codigo;
-   private String nome ;
+  private String nome ;
    private String dataNascimento ; 
    private String sexo ;
    private String planoSaude;
-   private String alergia;
+  private String alergia;
    private String tipoSanguineo;
 
 
@@ -37,6 +37,13 @@ public class Paciente {
    public void settiposanguineo(String tipoSanguineo){
     this.tipoSanguineo = tipoSanguineo;
    }
+    public void setCodigo(String codigo) {
+    this.codigo = codigo;
+  }
+   public void setPlanoSaude(String planoSaude) {
+    this.planoSaude = planoSaude;
+  }
+
 
 
    public String  getCodigo(){

@@ -1,6 +1,7 @@
 package Exercise_Nine.Question_01;
 
 public class Funcionario {
+    
     private String nome;
     private double salarioAnual;
     private int idade;
